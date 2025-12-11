@@ -30,13 +30,14 @@
         .navbar-brand {
             font-weight: 800;
             font-size: 1.9rem;
-            color: var(--sf-blue) !important;
+            color: rgb(255, 255, 255) !important;
         }
         .bg-custom-dark {
             background-color: var(--sf-dark) !important;
         }
         .nav-link {
             font-weight: 500;
+            color: aliceblue;
         }
 
         /* Utilizare Utility Classes pentru Headings */
@@ -50,26 +51,64 @@
             padding: 90px 0;
         }
 
-        /* Hero/Carusel - Combină textul cu un fundal de mare impact */
-        #caruselTechNeek {
+        /* Header Principal (Mutat din carusel) */
+        .hero-unit {
+            padding: 200px 0 200px 0; /* Ajustare padding superior (pt. navbar fix) */
             margin-top: 67px;
+            background-color: var(--sf-light-bg);
+            border-bottom: 5px solid var(--sf-blue);
+        }
+        .hero-unit h1 {
+            font-weight: 900;
+            font-size: 3.5rem;
+            color: var(--sf-dark);
+        }
+        .hero-unit .lead {
+            font-size: 1.5rem;
+            color: var(--sf-dark);
+        }
+        .hero-unit .btn-lg {
+            padding: 12px 35px;
+            border-radius: 50px;
+        }
+
+
+        /* Carusel (Rămas) */
+        #caruselTechNeek {
             max-height: 580px;
             overflow: hidden;
-            border-bottom: 5px solid var(--sf-blue);
+            /* Borderul a fost mutat la hero-unit */
         }
 
         .carousel-item img {
             height: 580px;
             object-fit: cover;
-            filter: brightness(40%); /* Foarte întunecat pentru text alb clar */
+            filter: brightness(40%);
         }
-        .carousel-caption h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
+        /* Asigură vizibilitatea textului pe toate dimensiunile */
+        .carousel-caption {
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: auto;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
-        .carousel-caption .btn-lg {
-            padding: 12px 35px;
-            border-radius: 50px; /* Butoane rotunjite (Pill) */
+        .carousel-caption h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .carousel-caption p {
+            font-size: 1.2rem;
+        }
+        /* Mărește contrastul textului pe mobil */
+        @media (max-width: 767.98px) { 
+            .carousel-caption {
+                padding: 10px;
+                background: rgba(0, 0, 0, 0.5); /* Fundal semi-transparent pentru lizibilitate */
+                width: 90%;
+                margin: 0 auto;
+                left: 5%;
+                right: 5%;
+            }
         }
 
         /* Carduri de Servicii */
@@ -99,7 +138,15 @@
             color: var(--sf-blue);
             text-decoration: none;
         }
-        
+
+        .footer-recenzii {
+            color: #F8F9FA;
+            padding: 15px;
+        }
+
+        .hero-unit-edit {
+            background-color: rgb(229, 242, 255);
+        }
     </style>
 </head>
 
@@ -107,7 +154,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark fixed-top shadow">
         <div class="container">
             <a class="navbar-brand" href="index.html">TechNeek</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -122,57 +169,57 @@
                         <a class="nav-link text-uppercase me-2" href="#portofoliu">Portofoliu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#contact">Contact</a>
+                        <a class="nav-link text-uppercase" href="#footer-contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
+    
+    <div class="hero-unit text-center hero-unit-edit">
+        <div class="container">
+            <h1>TechNeek: Revoluția Digitală Începe Aici</h1>
+            <p class="lead mt-4">Noi vom face visul digital al companiei tale să devină realitate.</p>
+            <a href="#servicii" class="btn btn-primary btn-lg mt-3 text-uppercase shadow">Descoperă Serviciile Noastre</a>
+        </div>
+    </div>
+    
     <header>
         <div id="caruselTechNeek" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#caruselTechNeek" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#caruselTechNeek" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#caruselTechNeek" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#caruselTechNeek" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#caruselTechNeek" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#caruselTechNeek" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1 (Dezvoltare Software)"></button>
+                <button type="button" data-bs-target="#caruselTechNeek" data-bs-slide-to="1" aria-label="Slide 2 (Infrastructură IT)"></button>
+                <button type="button" data-bs-target="#caruselTechNeek" data-bs-slide-to="2" aria-label="Slide 3 (Viziune)"></button>
+                <button type="button" data-bs-target="#caruselTechNeek" data-bs-slide-to="3" aria-label="Slide 4 (Servicii Cloud)"></button>
             </div>
+            
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="geometric.jpg" class="d-block w-100" alt="Grafică abstractă care simbolizează tehnologia și inovația digitală, fundal pentru eroul paginii.">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h1 class="text-white">TechNeek: Revoluția Digitală Începe Aici</h1>
-                        <p class="fs-4 text-white-50">Noi vom face visul digital al companiei tale să devină realitate.</p>
-                        <a href="#servicii" class="btn btn-primary btn-lg mt-3 text-uppercase">Descoperă Serviciile Noastre</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
                     <img src="team-work.jpg" class="d-block w-100" alt="Echipă de dezvoltatori lucrând împreună, ilustrând colaborarea în dezvoltarea software.">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption">
                         <h2>Dezvoltare Software Personalizată</h2>
-                        <p class="fs-5 text-white-50">Soluții unice, concepute pentru succesul afacerii dumneavoastră.</p>
+                        <p class="fs-5 text-white">Soluții unice, concepute pentru succesul afacerii dumneavoastră.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="beard-chair-computer.jpg" class="d-block w-100" alt="Profesionist IT zâmbind la birou, simbolizând eficiența și satisfacția în implementarea infrastructurii.">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="beard-chair-computer.jpg" class="d-block w-100" alt="Profesionist IT zâmbitor la birou, simbolizând eficiența și satisfacția în implementarea infrastructurii.">
+                    <div class="carousel-caption">
                         <h2>Infrastructură IT Robustă</h2>
-                        <p class="fs-5 text-white-50">Securitate și performanță garantată pentru rețeaua dumneavoastră.</p>
+                        <p class="fs-5 text-white">Securitate și performanță garantată pentru rețeaua dumneavoastră.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="team-work3.jpg" class="d-block w-100" alt="Oameni de afaceri interacționând în jurul unui laptop, evidențiind parteneriatul de încredere.">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption">
                         <h2>Viziunea noastră</h2>
-                        <p class="fs-5 text-white-50">Parteneriat de încredere pentru o evoluție tehnologică constantă.</p>
+                        <p class="fs-5 text-white">Parteneriat de încredere pentru o evoluție tehnologică constantă.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="analytics.jpg" class="d-block w-100" alt="Bărbat analizând grafice pe tabletă, reprezentând optimizarea și scalabilitatea serviciilor Cloud.">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption">
                         <h2>Servicii Cloud Optimizate</h2>
-                        <p class="fs-5 text-white-50">Scalabilitate, flexibilitate și costuri reduse.</p>
+                        <p class="fs-5 text-white">Scalabilitate, flexibilitate și costuri reduse.</p>
                     </div>
                 </div>
             </div>
@@ -196,13 +243,13 @@
                     </div>
                     <div class="col-lg-6 order-lg-0 mt-4 mt-lg-0">
                         <h2 class="display-6 text-primary mb-4">Credem că digitalizarea este modul ideal de a crea schimbare</h2>
-                        <p class="lead">La <strong>TechNeek</strong>, ne poziționăm ca parteneri strategici, nu doar furnizori. Misiunea noastră este de a facilita **transformarea digitală completă** a afacerii dumneavoastră, utilizând cele mai noi tehnologii cloud și metodologii agile.</p>
+                        <p class="lead">La TechNeek, ne poziționăm ca parteneri strategici, nu doar furnizori. Misiunea noastră este de a facilita transformarea digitală completă a afacerii dumneavoastră, utilizând cele mai noi tehnologii cloud și metodologii agile.</p>
                         
                         <h3 class="mt-4 mb-3">Valorile Noastre Fundamentale</h3>
                         <ul class="list-group list-group-flush shadow-sm rounded-3">
-                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> <strong>Inovație:</strong> Investim constant în tehnologii de vârf.</li>
-                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> <strong>Transparență:</strong> Comunicare clară și onestă pe tot parcursul proiectului.</li>
-                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> <strong>Excelență:</strong> Ne dedicăm livrării de soluții de cea mai înaltă calitate.</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Inovație: Investim constant în tehnologii de vârf.</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Transparență: Comunicare clară și onestă pe tot parcursul proiectului.</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Excelență: Ne dedicăm livrării de soluții de cea mai înaltă calitate.</li>
                         </ul>
                     </div>
                 </div>
@@ -273,8 +320,8 @@
                     <div class="col-md-6 col-lg-4">
                         <blockquote class="blockquote bg-sf-light-bg p-4 border-start border-5 border-sf-blue rounded-3 shadow-sm h-100">
                             <p class="mb-0 fs-5">"Am observat o reducere imediată de 30% a costurilor de operare. Implementarea Cloud a fost impecabilă."</p>
-                            <footer class="blockquote-footer mt-3">
-                                <span class="fw-bold">Ana M.</span>, <cite title="Compania X">CEO la FinTech Solutions</cite>
+                            <footer class="blockquote-footer footer-recenzii mt-3">
+                                <span class="fw-bold">Ana M.</span>, <cite title="Compania X">CEO la FoinTek</cite>
                             </footer>
                         </blockquote>
                     </div>
@@ -282,8 +329,8 @@
                     <div class="col-md-6 col-lg-4">
                         <blockquote class="blockquote bg-sf-light-bg p-4 border-start border-5 border-sf-blue rounded-3 shadow-sm h-100">
                             <p class="mb-0 fs-5">"Echipa de Dezvoltare Software a livrat o aplicație mobilă peste așteptări, respectând termenele stabilite. Calitatea este de necontestat."</p>
-                            <footer class="blockquote-footer mt-3">
-                                <span class="fw-bold">Radu P.</span>, <cite title="Compania Y">Director de Marketing</cite>
+                            <footer class="blockquote-footer footer-recenzii mt-3">
+                                <span class="fw-bold">Radu P.</span>, <cite title="Compania Y">Director Marketing FoinTek</cite>
                             </footer>
                         </blockquote>
                     </div>
@@ -294,33 +341,33 @@
 
                 <div class="row g-4 mt-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
                     <div class="col">
-                        <blockquote class="blockquote p-3 bg-light border border-sf-blue rounded-3 shadow-sm h-100">
+                        <blockquote class="blockquote bg-sf-light-bg p-4 border-start border-5 border-sf-blue rounded-3 shadow-sm h-100">
                             <p class="small mb-0">"Suportul tehnic 24/7 este un avantaj imens. Am avut mereu stabilitatea necesară."</p>
-                            <footer class="blockquote-footer mt-2">
+                            <footer class="blockquote-footer footer-recenzii mt-2">
                                 Elena V.
                             </footer>
                         </blockquote>
                     </div>
                     <div class="col">
-                         <blockquote class="blockquote p-3 bg-light border border-sf-blue rounded-3 shadow-sm h-100">
+                         <blockquote class="blockquote bg-sf-light-bg p-4 border-start border-5 border-sf-blue rounded-3 shadow-sm h-100">
                             <p class="small mb-0">"Ne-au ajutat să ne conformăm GDPR. Soluțiile lor de securitate sunt de încredere."</p>
-                            <footer class="blockquote-footer mt-2">
+                            <footer class="blockquote-footer footer-recenzii mt-2">
                                 Mihai D.
                             </footer>
                         </blockquote>
                     </div>
                      <div class="col">
-                         <blockquote class="blockquote p-3 bg-light border border-sf-blue rounded-3 shadow-sm h-100">
+                         <blockquote class="blockquote bg-sf-light-bg p-4 border-start border-5 border-sf-blue rounded-3 shadow-sm h-100">
                             <p class="small mb-0">"Parteneriatul pe termen lung cu TechNeek a fost cheia creșterii noastre constante."</p>
-                            <footer class="blockquote-footer mt-2">
+                            <footer class="blockquote-footer footer-recenzii mt-2">
                                 Andrei C.
                             </footer>
                         </blockquote>
                     </div>
                      <div class="col">
-                         <blockquote class="blockquote p-3 bg-light border border-sf-blue rounded-3 shadow-sm h-100">
+                         <blockquote class="blockquote bg-sf-light-bg p-4 border-start border-5 border-sf-blue rounded-3 shadow-sm h-100">
                             <p class="small mb-0">"Procesul de migrare a datelor a fost lipsit de erori și extrem de rapid. Recomand!"</p>
-                            <footer class="blockquote-footer mt-2">
+                            <footer class="blockquote-footer footer-recenzii mt-2">
                                 Maria L.
                             </footer>
                         </blockquote>
@@ -350,69 +397,53 @@
             </div>
         </section>
 
-        <section id="contact" class="bg-white">
+        <section id="harta-locatie" class="bg-white text-center">
             <div class="container">
-                <h2 class="text-center display-6 mb-5">Contactează-ne</h2>
-                <div class="row g-5">
-                    
-                    <div class="col-lg-6">
-                        <h3 class="mb-3">Locația Sediului Central</h3>
-                        <div class="ratio ratio-16x9 rounded-4 shadow-lg">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1098.4907106096538!2d23.58550785002014!3d46.7725925760814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490c2941916361%3A0x6e7b7e2c9430154e!2sPia%C8%9Ba%20Unirii%2C%20Cluj-Napoca!5e0!3m2!1sro!2sro!4v1620839811801!5m2!1sro!2sro" 
-                                style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy" 
-                                aria-label="Localizarea sediului TechNeek pe hartă, în Cluj-Napoca">
-                            </iframe>
-                        </div>
-                        <p class="small mt-3 text-muted">Vă așteptăm la sediul nostru pentru o discuție despre soluțiile viitorului.</p>
-                    </div>
-                    
-                    <div class="col-lg-6">
-                        <div class="card p-4 rounded-4 shadow-lg h-100">
-                            <div class="card-body">
-                                <h3 class="card-title text-sf-dark mb-4">Detalii și Program de Lucru</h3>
-                                
-                                <p class="fs-5"><i class="fas fa-map-marker-alt text-primary me-3 fa-fw"></i> <strong>Adresă:</strong> Strada Inovatorilor, Nr. 10, Cluj-Napoca, România</p>
-                                <p class="fs-5"><i class="fas fa-phone-alt text-primary me-3 fa-fw"></i> <strong>Telefon:</strong> +40 700 123 456</p>
-                                <p class="fs-5"><i class="fas fa-envelope text-primary me-3 fa-fw"></i> <strong>Email:</strong> contact@techneek.ro</p>
-                                <hr>
-                                <h4>Program:</h4>
-                                <p>Luni - Vineri: 9:00 - 18:00</p>
-                                
-                                <img src="office.jpg" class="img-fluid rounded-3 mt-3 shadow" alt="Prim-plan cu mâini folosind un smartphone lângă un laptop, pentru contact rapid.">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                 <h2 class="display-6 mb-5">Vino să ne cunoaștem!</h2>
+                 <p class="lead mb-4">Ne puteți găsi la sediul nostru pentru o discuție despre soluțiile viitorului.</p>
+                 <div class="row justify-content-center">
+                     <div class="col-lg-10">
+                         <h3 class="mb-3">Locația Sediului Central</h3>
+                         <div class="ratio ratio-16x9 rounded-4 shadow-lg">
+                             <iframe
+                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1098.4907106096538!2d23.58550785002014!3d46.7725925760814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490c2941916361%3A0x6e7b7e2c9430154e!2sPia%C8%9Ba%20Unirii%2C%20Cluj-Napoca!5e0!3m2!1sro!2sro!4v1620839811801!5m2!1sro!2sro" 
+                                 style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy" 
+                                 aria-label="Localizarea sediului TechNeek pe hartă, în Cluj-Napoca">
+                             </iframe>
+                         </div>
+                     </div>
+                 </div>
             </div>
         </section>
+        
     </main>
 
-    <footer>
+    <footer id="footer-contact">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-start">
                 
-                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
                     <span class="navbar-brand text-white">TechNeek</span>
                     <p class="small mt-2">© 2024 TechNeek. Toate drepturile rezervate.</p>
+                    <p class="small mt-4">Program de Lucru:<br>Luni - Vineri: 9:00 - 18:00</p>
                 </div>
+                <div class="col-md-6 text-center text-md-start">
+                    <h5 class="text-white mb-3">Contactează-ne</h5>
+                    <p class="small text-white mb-1"><i class="fas fa-map-marker-alt text-primary me-2 fa-fw"></i>Adresă: Strada Inovatorilor, Nr. 10, Cluj-Napoca, România</p>
+                    <p class="small text-white mb-1"><i class="fas fa-phone-alt text-primary me-2 fa-fw"></i>Telefon: +40 700 123 456</p>
+                    <p class="small text-white mb-3"><i class="fas fa-envelope text-primary me-2 fa-fw"></i>Email: contact@techneek.ro</p>
 
-                <div class="col-md-4 text-center mb-3 mb-md-0">
-                    <a href="#despre" class="mx-2">Despre</a> | 
-                    <a href="#servicii" class="mx-2">Servicii</a> |
-                    <a href="#">Termeni și Condiții</a>
-                </div>
-
-                <div class="col-md-4 text-center text-md-end">
-                    <a href="https://facebook.com/TechNeek" target="_blank" aria-label="Link către pagina de Facebook" class="text-white mx-2 fs-4">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://linkedin.com/company/TechNeek" target="_blank" aria-label="Link către pagina de LinkedIn" class="text-white mx-2 fs-4">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://twitter.com/TechNeek" target="_blank" aria-label="Link către pagina de X (Twitter)" class="text-white mx-2 fs-4">
-                        <i class="fab fa-twitter"></i>
-                    </a>
+                    <div class="mt-4">
+                         <a href="https://facebook.com/TechNeek" target="_blank" aria-label="Link către pagina de Facebook" class="text-white mx-2 fs-4">
+                             <i class="fab fa-facebook-f"></i>
+                         </a>
+                         <a href="https://linkedin.com/company/TechNeek" target="_blank" aria-label="Link către pagina de LinkedIn" class="text-white mx-2 fs-4">
+                             <i class="fab fa-linkedin-in"></i>
+                         </a>
+                         <a href="https://twitter.com/TechNeek" target="_blank" aria-label="Link către pagina de X (Twitter)" class="text-white mx-2 fs-4">
+                             <i class="fab fa-twitter"></i>
+                         </a>
+                    </div>
                 </div>
             </div>
         </div>
