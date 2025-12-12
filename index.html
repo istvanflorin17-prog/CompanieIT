@@ -53,7 +53,7 @@
 
         /* Header Principal (Mutat din carusel) */
         .hero-unit {
-            padding: 200px 0 200px 0; /* Ajustare padding superior (pt. navbar fix) */
+            padding: 200px 0 200px 0;
             margin-top: 67px;
             background-color: var(--sf-light-bg);
             border-bottom: 5px solid var(--sf-blue);
@@ -77,7 +77,6 @@
         #caruselTechNeek {
             max-height: 580px;
             overflow: hidden;
-            /* Borderul a fost mutat la hero-unit */
         }
 
         .carousel-item img {
@@ -154,7 +153,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark fixed-top shadow">
         <div class="container">
             <a class="navbar-brand" href="index.html">TechNeek</a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -405,7 +404,7 @@
                      <div class="col-lg-10">
                          <h3 class="mb-3">Locația Sediului Central</h3>
                          <div class="ratio ratio-16x9 rounded-4 shadow-lg">
-                             <iframe
+                             <iframe 
                                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1098.4907106096538!2d23.58550785002014!3d46.7725925760814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490c2941916361%3A0x6e7b7e2c9430154e!2sPia%C8%9Ba%20Unirii%2C%20Cluj-Napoca!5e0!3m2!1sro!2sro!4v1620839811801!5m2!1sro!2sro" 
                                  style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy" 
                                  aria-label="Localizarea sediului TechNeek pe hartă, în Cluj-Napoca">
@@ -429,9 +428,9 @@
                 </div>
                 <div class="col-md-6 text-center text-md-start">
                     <h5 class="text-white mb-3">Contactează-ne</h5>
-                    <p class="small text-white mb-1"><i class="fas fa-map-marker-alt text-primary me-2 fa-fw"></i>Adresă: Strada Inovatorilor, Nr. 10, Cluj-Napoca, România</p>
-                    <p class="small text-white mb-1"><i class="fas fa-phone-alt text-primary me-2 fa-fw"></i>Telefon: +40 700 123 456</p>
-                    <p class="small text-white mb-3"><i class="fas fa-envelope text-primary me-2 fa-fw"></i>Email: contact@techneek.ro</p>
+                    <p class="small text-white-50 mb-1"><i class="fas fa-map-marker-alt text-primary me-2 fa-fw"></i>Adresă: Strada Inovatorilor, Nr. 10, Cluj-Napoca, România</p>
+                    <p class="small text-white-50 mb-1"><i class="fas fa-phone-alt text-primary me-2 fa-fw"></i>Telefon: +40 700 123 456</p>
+                    <p class="small text-white-50 mb-3"><i class="fas fa-envelope text-primary me-2 fa-fw"></i>Email: contact@techneek.ro</p>
 
                     <div class="mt-4">
                          <a href="https://facebook.com/TechNeek" target="_blank" aria-label="Link către pagina de Facebook" class="text-white mx-2 fs-4">
@@ -451,22 +450,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-    <script>
-        (function () {
-            'use strict'
-            var forms = document.querySelectorAll('.needs-validation')
-            Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-        })()
-    </script>
 </body>
 
 </html>
+
