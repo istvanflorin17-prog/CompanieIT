@@ -29,14 +29,14 @@
             background-color: #ffffff;
         }
 
+        .navbar {
+            background-color: #16325C;
+        }
+
         .navbar-brand {
             font-weight: 800;
             font-size: 1.9rem;
-            color: rgb(255, 255, 255) !important;
-        }
-
-        .bg-custom-dark {
-            background-color: var(--sf-dark) !important;
+            color: rgb(255, 255, 255);
         }
 
         .nav-link {
@@ -50,27 +50,11 @@
         }
 
         section {
-            padding: 90px 0;
-        }
-
-        .h1 {
-            font-weight: 900;
-            font-size: 3.5rem;
-            color: white;
-        }
-
-        .h1-p {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        #caruselTechNeek {
-            max-height: 580px;
+            padding: 5.625rem 0;
         }
 
         .carousel-item img {
-            height: 580px;
+            height: 36.25rem;
             object-fit: cover;
             filter: brightness(40%);
         }
@@ -80,15 +64,6 @@
             transform: translateY(-50%);
             bottom: auto;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .carousel-caption h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        .carousel-caption p {
-            font-size: 1.2rem;
         }
 
         .card-service {
@@ -111,13 +86,14 @@
         footer {
             background-color: var(--sf-dark);
             color: var(--sf-light-bg);
-            padding: 45px 0;
-            border-top: 5px solid var(--sf-blue);
+            padding: 3rem 0;
+            border-top: 0.3rem solid var(--sf-blue);
         }
 
-        .footer-recenzii {
+        .recenzii {
+            background-color: #03569b;
             color: #F8F9FA;
-            padding: 15px;
+            padding: 0.75em;
         }
     </style>
 </head>
@@ -172,15 +148,15 @@
                     <img src="geometric.jpg" class="d-block w-100"
                         alt="Grafică tehnică abstractă, reprezentând rețele de cloud computing.">
                     <div class="carousel-caption">
-                        <h1 class="h1">TechNeek: Revoluția digitală începe aici</h1>
-                        <p class="h1-p">Împreună facem visul digital al companiei tale o realitate</p>
+                        <h1 class="display-2 fw-bolder text-white">TechNeek: Revoluția digitală începe aici</h1>
+                        <p class="lead fw-bold text white">Împreună facem visul digital al companiei tale o realitate</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="team-work.jpg" class="d-block w-100"
                         alt="Echipă de dezvoltatori lucrând împreună, ilustrând colaborarea în dezvoltarea software.">
                     <div class="carousel-caption">
-                        <h2>Dezvoltare Software Personalizată</h2>
+                        <p class="fs-1 fw-bold">Dezvoltare Software Personalizată</p>
                         <p class="fs-5 text-white">Soluții unice, concepute pentru succesul afacerii dumneavoastră.</p>
                     </div>
                 </div>
@@ -188,7 +164,7 @@
                     <img src="beard-chair-computer.jpg" class="d-block w-100"
                         alt="Profesionist IT zâmbitor la birou, simbolizând eficiența și satisfacția în implementarea infrastructurii.">
                     <div class="carousel-caption">
-                        <h2>Infrastructură IT</h2>
+                        <p class="fs-1 fw-bold">Infrastructură IT</p>
                         <p class="fs-5 text-white">Securitate și performanță garantată</p>
                     </div>
                 </div>
@@ -196,7 +172,7 @@
                     <img src="team-work3.jpg" class="d-block w-100"
                         alt="Oameni de afaceri interacționând în jurul unui laptop, evidențiind parteneriatul de încredere.">
                     <div class="carousel-caption">
-                        <h2>Viziunea noastră</h2>
+                        <p class="fs-1 fw-bold">Viziunea noastră</p>
                         <p class="fs-5 text-white">Parteneriat de încredere pentru o evoluție tehnologică constantă.</p>
                     </div>
                 </div>
@@ -204,7 +180,7 @@
                     <img src="analytics.jpg" class="d-block w-100"
                         alt="Bărbat analizând grafice pe tabletă, reprezentând optimizarea și scalabilitatea serviciilor Cloud.">
                     <div class="carousel-caption">
-                        <h2>Servicii Cloud Optimizate</h2>
+                        <p class="fs-1 fw-bold">Servicii Cloud Optimizate</p>
                         <p class="fs-5 text-white">Scalabilitate, flexibilitate și costuri reduse.</p>
                     </div>
                 </div>
@@ -253,19 +229,19 @@
         <section id="servicii" class="bg-sf-light-bg">
             <div class="container">
                 <h2 class="text-center display-6 mb-5">Servicii de calitate. Impact real.</h2>
-                <p class="text-center lead mb-5 text-muted">Alegeți dintr-o gamă extinsă de servicii IT, fiecare
+                <p class="text-center lead mb-5">Alegeți dintr-o gamă extinsă de servicii IT, fiecare
                     conceput pentru a vă propulsa afacerea înainte.</p>
 
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
 
-                    <div class="col">
+                    <div class="col d-flex">
                         <div class="card card-service h-100">
                             <img src="code5.jpg" class="card-img-top card-img-top-custom"
                                 alt="Bărbat arătând un bilețel CODE, ilustrând munca de dezvoltare software.">
                             <div class="card-body p-4">
                                 <span class="badge bg-primary text-white rounded-pill mb-2">Dezvoltare</span>
                                 <h3 class="card-title mt-2">Dezvoltare Software Personalizată</h3>
-                                <h4>Preț:</h4>
+                                <p class="card-text fs-3 fw-bold text-sf-dark">Preț:</p>
                                 <p class="card-text fs-5 fw-bold text-sf-dark">45 €/oră</p>
                                 <span class="badge bg-success py-2 px-3">Ofertă Nouă! </span>
                                 <p class="small mt-3">Creăm aplicații web, mobile și soluții enterprise, folosind
@@ -274,14 +250,14 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col d-flex">
                         <div class="card card-service h-100">
                             <img src="computer-3368242_1280.jpg" class="card-img-top card-img-top-custom"
                                 alt="Mâini tastând la laptop în timpul unei întâlniri de afaceri.">
                             <div class="card-body p-4">
                                 <span class="badge bg-info text-dark rounded-pill mb-2">Scalabilitate</span>
                                 <h3 class="card-title mt-2">Migrare & Management Cloud</h3>
-                                <h4>Preț:</h4>
+                                <p class="card-text fs-3 fw-bold text-sf-dark">Preț:</p>
                                 <p class="card-text fs-5 fw-bold text-sf-dark">299 €/lună</p>
                                 <span class="badge bg-danger py-2 px-3">Stocare Gratuită 3 Luni</span>
                                 <p class="small mt-3">Implementăm soluții Cloud optimizate pe platforme de top,
@@ -290,14 +266,14 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col d-flex">
                         <div class="card card-service h-100">
                             <img src="security.jpg" class="card-img-top card-img-top-custom"
                                 alt="Textul 'Security' (Securitate) pe un ecran întunecat, cu un cursor de mouse în formă de mână care indică spre el">
                             <div class="card-body p-4">
                                 <span class="badge bg-warning text-dark rounded-pill mb-2">Securitate</span>
                                 <h3 class="card-title mt-2">Infrastructură IT & Securitate Cibernetică</h3>
-                                <h4>Preț:</h4>
+                                <p class="card-text fs-3 fw-bold text-sf-dark">Preț:</p>
                                 <p class="card-text fs-5 fw-bold text-sf-dark">450 €/proiect</p>
                                 <span class="badge bg-secondary py-2 px-3">Serviciu Premium 24/7</span>
                                 <p class="small mt-3">Asigurăm rețele stabile, suport tehnic proactiv și audituri de
@@ -324,9 +300,9 @@
                             class="blockquote bg-sf-light-bg p-4 border-start border-5 border-sf-blue rounded-3 shadow-sm h-100 d-flex flex-column">
                             <p class="mb-0 fs-5 flex-grow-1">"Implementarea Cloud a fost impecabilă. Sunt foarte mulțumită de
                                 colaborarea noastră."</p>
-                            <footer class="blockquote-footer footer-recenzii mt-3">
+                            <div class="blockquote-footer recenzii mt-3">
                                 <span class="fw-bold">Ana M.</span>, <cite title="Compania X">CEO la FoinTek</cite>
-                            </footer>
+                            </div>
                         </blockquote>
                     </div>
 
@@ -335,10 +311,10 @@
                             class="blockquote bg-sf-light-bg p-4 border-start border-5 border-sf-blue rounded-3 shadow-sm h-100 d-flex flex-column">
                             <p class="mb-0 fs-5 flex-grow-1">"Echipa de Dezvoltare Software a livrat o aplicație mobilă peste
                                 așteptări, respectând termenele stabilite. Calitatea este de necontestat."</p>
-                            <footer class="blockquote-footer footer-recenzii mt-3">
+                            <div class="blockquote-footer recenzii mt-3">
                                 <span class="fw-bold">Radu P.</span>, <cite title="Compania Y">Director Marketing
                                     FoinTek</cite>
-                            </footer>
+                                </div>
                         </blockquote>
                     </div>
 
@@ -352,9 +328,9 @@
                             class="blockquote bg-sf-light-bg p-4 border-start border-5 border-sf-blue rounded-3 shadow-sm h-100 d-flex flex-column">
                             <p class="small mb-0 flex-grow-1">"Suportul tehnic 24/7 este un avantaj imens. Am avut mereu
                                 stabilitatea necesară."</p>
-                            <footer class="blockquote-footer footer-recenzii mt-2">
+                            <div class="blockquote-footer recenzii mt-2">
                                 Elena V.
-                            </footer>
+                            </div>
                         </blockquote>
                     </div>
                     <div class="col">
@@ -362,9 +338,9 @@
                             class="blockquote bg-sf-light-bg p-4 border-start border-5 border-sf-blue rounded-3 shadow-sm h-100 d-flex flex-column">
                             <p class="small mb-0 flex-grow-1">"Ne-au ajutat să ne conformăm GDPR. Soluțiile lor de securitate sunt
                                 de încredere."</p>
-                            <footer class="blockquote-footer footer-recenzii mt-2">
+                            <div class="blockquote-footer recenzii mt-2">
                                 Mihai D.
-                            </footer>
+                            </div>
                         </blockquote>
                     </div>
                     <div class="col">
@@ -372,9 +348,9 @@
                             class="blockquote bg-sf-light-bg p-4 border-start border-5 border-sf-blue rounded-3 shadow-sm h-100 d-flex flex-column">
                             <p class="small mb-0 flex-grow-1">"Parteneriatul pe termen lung cu TechNeek a fost cheia creșterii
                                 noastre constante."</p>
-                            <footer class="blockquote-footer footer-recenzii mt-2">
+                            <div class="blockquote-footer recenzii mt-2">
                                 Andrei C.
-                            </footer>
+                            </div>
                         </blockquote>
                     </div>
                     <div class="col">
@@ -382,9 +358,9 @@
                             class="blockquote bg-sf-light-bg p-4 border-start border-5 border-sf-blue rounded-3 shadow-sm h-100 d-flex flex-column">
                             <p class="small mb-0 flex-grow-1">"Procesul de migrare a datelor a fost lipsit de erori și extrem de
                                 rapid. Recomand!"</p>
-                            <footer class="blockquote-footer footer-recenzii mt-2">
+                            <div class="blockquote-footer recenzii mt-2">
                                 Maria L.
-                            </footer>
+                            </div>
                         </blockquote>
                     </div>
                 </div>
@@ -447,7 +423,7 @@
                     <p class="small mt-4">Program de Lucru:<br>Luni - Vineri: 9:00 - 18:00</p>
                 </div>
                 <div class="col-md-6 text-center text-md-start">
-                    <h5 class="text-white mb-3">Contactează-ne</h5>
+                    <h4 class="text-white mb-3">Contactează-ne</h4>
                     <p class="small text-white mb-1"><i
                             class="fas fa-map-marker-alt text-primary me-2 fa-fw"></i>Adresă: Strada Arany Janos 9,
                         Cluj-Napoca, România</p>
@@ -458,15 +434,15 @@
 
                     <div class="mt-4">
                         <a href="https://facebook.com/" target="_blank" aria-label="Link către pagina de Facebook"
-                            class="text-white mx-2 fs-4">
+                            class="text-white mx-2 fs-4 text-decoration-none">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="https://linkedin.com/company/" target="_blank"
-                            aria-label="Link către pagina de LinkedIn" class="text-white mx-2 fs-4">
+                            aria-label="Link către pagina de LinkedIn" class="text-white mx-2 fs-4 text-decoration-none">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                         <a href="https://twitter.com/" target="_blank" aria-label="Link către pagina de X (Twitter)"
-                            class="text-white mx-2 fs-4">
+                            class="text-white mx-2 fs-4 text-decoration-none">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </div>
